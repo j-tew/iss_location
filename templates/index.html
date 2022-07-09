@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>ISS Location</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="content">Track the ISS</h1>
+    <p class="content">To get the current location of the ISS and a list of crew members, click the button below.</p>
+    <div class="center">
+      <button type="submit" onclick="location.reload();">Update ISS Position</button>
+    </div>
+    <div class="info">
+        <p>Latitude: {{ position.latitude }}</p>
+        <p>Longitude: {{ position.longitude }}</p>
+        <p>Ground Location: {{ country }}</p>
+        <p>There are {{ crew[0] }} crew members aboard the ISS:</p>
+        <ul>
+            {% for person in crew[1] %}
+            <li>{{ person.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <img alt="ISS Location Map" src={{ map }}>
+  </body>
+</html>
