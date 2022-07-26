@@ -3,7 +3,7 @@
 This is a simple Flask App that uses the Open Notify [ISS Current Location](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) and [People in Space](http://open-notify.org/Open-Notify-API/People-In-Space/) APIs to show the ground location of the ISS and a list of the astronauts aboard the spacecraft.
 
 ### Installation
-1. git clone the repo
+1. Clone the repo
 `git clone https://github.com/j-tew/iss_location.git`
 2. Go into the project directory
 `cd iss_location`
